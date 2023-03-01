@@ -1,7 +1,7 @@
-# Natural language processing course 2022/23: `Put name of your project here`
+# Natural language processing course 2022/23: `Paraphrasing sentences`
 
 Team members:
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Jannik Weiß`, `70088643`, `jw30016@student.uni-lj.si`
  * `Nikolay Vasilev`, `63190338`, `nv7834@student.uni-lj.si`
  * `Jan Jenicek`, `70090030`, `jj86854@student.uni-lj.si`
  
