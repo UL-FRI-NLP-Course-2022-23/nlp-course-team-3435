@@ -2,11 +2,6 @@
 Data parsing tests
 """
 
-# hotfix
-import sys
-sys.path.append("../src/")
-
-
 import datautils
 import io
 
@@ -14,7 +9,7 @@ import io
 # TODO: use fuxtures instead
 
 
-def test_dummy_row():
+def test_dummy_row() -> None:
     data_point_ref = datautils.ParaphraseDataPoint(
         lhs="[JJ]",
         phrase="transplant",

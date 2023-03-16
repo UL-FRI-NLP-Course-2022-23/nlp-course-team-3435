@@ -5,15 +5,17 @@ TODO: implement strategies for handling errors (skip feature / skip data point /
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, Iterator, Tuple, TextIO
+from typing import Any, Dict, Iterator, Tuple, TextIO, Optional
 
+
+FeatureValue = Optional[float]
 
 @dataclass(frozen=True)
 class ParaphraseDataPoint:
     phrase: str 
     paraphrase: str
     lhs: str = ""
-    features: Dict[str, str] = field(default_factory=dict)
+    features: Dict[str, FeatureValue] = field(default_factory=dict)
     alignment: str = ""
     entailment: str = ""
 
@@ -24,10 +26,7 @@ class ParaphraseParsingError(ValueError):
     """
 
 
-FeatureValue = float | None
-
-
-def _parse_safe(value, dtype: Any) -> Any | None:
+def _parse_safe(value, dtype: Any) -> Optional[Any]:
     """
     Converts value to specified data type. 
 
