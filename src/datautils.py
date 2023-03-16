@@ -5,7 +5,7 @@ TODO: implement strategies for handling errors (skip feature / skip data point /
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, Iterator, Tuple
+from typing import Any, Dict, Iterator, Tuple, TextIO
 
 
 @dataclass(frozen=True)
@@ -66,7 +66,7 @@ def _parse_ppdb_features(features_string: str) -> Dict[str, FeatureValue]:
 
 
 
-def parse_data_ppdb(path: str) -> Iterator[ParaphraseDataPoint]:
+def parse_data_ppdb(file_stream: TextIO) -> Iterator[ParaphraseDataPoint]:
     """
     Parses locally stored PPBD data into the unified format.
     Returns an iterator over individual parsed data points. 
@@ -74,23 +74,21 @@ def parse_data_ppdb(path: str) -> Iterator[ParaphraseDataPoint]:
     Raw PPBD data format: 
         LHS ||| PHRASE ||| PARAPHRASE ||| (FEATURE=VALUE )* ||| ALIGNMENT ||| ENTAILMENT
     """
-    with open(path, "r") as f:
-        while f:
-            line = f.readline()
-            line_split = line.split("|||")
+    while file_stream:
+        # split individual parts of the row
+        line_split = file_stream.readline().split("|||")
+        lhs, phrase, paraphrase, features_str, alignment, entailment = (
+            [line.strip() for line in line_split]
+        )
+        # parse features into the dict format
+        features_dict = _parse_ppdb_features(features_str)
 
-            lhs, phrase, paraphrase, features_str, alignment, entailment = (
-                [line.strip() for line in line_split]
-            )
-            # parse features
-            features_dict = _parse_ppdb_features(features_str)
-
-            yield ParaphraseDataPoint(
-                lhs=lhs, 
-                phrase=phrase, 
-                paraphrase=paraphrase,
-                features=features_dict,
-                alignment=alignment,
-                entailment=entailment,
-            )
+        yield ParaphraseDataPoint(
+            lhs=lhs, 
+            phrase=phrase, 
+            paraphrase=paraphrase,
+            features=features_dict,
+            alignment=alignment,
+            entailment=entailment,
+        )
 
