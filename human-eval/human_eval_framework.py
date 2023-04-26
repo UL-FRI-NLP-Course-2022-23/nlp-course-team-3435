@@ -1,5 +1,6 @@
 from typing import List, Tuple
-
+import pandas as pd
+import random
 
 def square(x):
     return x**2
@@ -31,13 +32,13 @@ def store_scores_to_file(sents: List[Tuple[str, str]], scores: List[float], corp
     if not corp_ids:
         corp_ids = [1]*len(sents)
     corp_scores = corpus_scores(scores, corp_ids)
-    with open('eval.txt', 'w') as f:
+    with open('eval.txt', 'w', encoding="utf-8") as f:
         f.write('# Corpus scores\n')
         for i, corp_score in enumerate(corp_scores):
-            f.write(f'{i+1} {corp_score:.3f}\n')
+            f.write(f'{i+1}: {corp_score:.3f}\n')
         f.write('# Paraphrase scores\n')
         for i in range(len(sents)):
-            f.write(f'{corp_ids[i]} {scores[i]:.3f} {sents[i][0]} ||| {sents[i][1]}\n')
+            f.write(f'{corp_ids[i]}: {scores[i]:.3f} {sents[i][0]} ||| {sents[i][1]}\n')
 
 
 def eval_cmd(sents: List[Tuple[str, str]], sim_wfunc=None, div_wfunc=None) -> List[float]:
@@ -65,7 +66,24 @@ def eval_cmd(sents: List[Tuple[str, str]], sim_wfunc=None, div_wfunc=None) -> Li
 
 
 if __name__ == '__main__':
-    sents = [('asdf', 'asdd'), ('wert zui', 'zui wert'), ('hhhhh', 'hh, hhhh'), ('hallo', 'guten morgen'), ('aaa bb c', 'ab bb cc')]
-    corp_ids = [1,2,1,2,3]
+    NUM_SENTENCES = 15
+    LANGUAGE = input("Choose language (en, sl, cs, de): ")
+
+    if LANGUAGE == 'sl':
+        df = pd.read_csv('../data/paraphrases_sl.csv')
+    elif LANGUAGE == 'cs':
+        df = pd.read_csv('../data/paraphrases_cs.csv')
+    elif LANGUAGE == 'de':
+        df = pd.read_csv('../data/paraphrases_de.csv')
+    else:
+        df = pd.read_csv('../data/paraphrases_en.csv')
+
+    df_list = list(zip(df['Original'].tolist(), df['Parahprase'].tolist()))
+    df_list = list(zip(df.index.tolist(), df_list))
+
+    indexes = random.sample(range(1, len(df_list)), NUM_SENTENCES)
+    sents = [df_list[index][1] for index in indexes]
+    corp_ids = [df_list[index][0] for index in indexes]
+
     scores = eval_cmd(sents, square, square_neg)
     store_scores_to_file(sents, scores, corp_ids)

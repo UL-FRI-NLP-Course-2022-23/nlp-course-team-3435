@@ -1,0 +1,32 @@
+# Corpus scores
+1: 0.058
+2: 0.737
+3: 0.026
+4: 0.020
+5: 0.328
+6: 0.146
+7: 0.614
+8: 0.005
+9: 0.006
+10: 0.470
+11: 0.004
+12: 0.030
+13: 0.270
+14: 0.046
+15: 0.002
+# Paraphrase scores
+55334: 0.005 Die Gas-Kochstelle mit Glaskeramik: bietet Ihnen bei sehr flachem Design eine starke Hitzebeständigkeit. ||| Der Glas-Keramik-Gaskochfeld: bietet ein sehr flaches Design und eine hohe Wärmebeständigkeit.
+38480: 0.026 Nächster: klare rundes Reinigungsöl PET-Plastikflasche mit Schraubverschluss 120ml ||| Nächster Artikel: Klares rundes Reinigungsöl PET-Kunststoffflasche mit Schraubverschluss 120ml
+58703: 0.004 Das Steroid fördert auch härter und trockener Körperbau. ||| Das Steroid fördert auch härter und Trockner Körper.
+5150: 0.058 Unterkunft in Peroj, Nähe Zentrum. ||| Unterkunft in Peroj, in der Nähe Zentrum.
+40372: 0.020 Nur als Referenz gedacht. ||| Nur als Referenz gedacht.
+75976: 0.002 · Übertragen Wettbewerbsvorteile und Kernkompetenzen in angrenzende Märkte. ||| · Übertragung von Wettbewerbsvorteilen und Kernkompetenzen auf angrenzende Märkte.
+60261: 0.030 Es hat die niedrigste Einkommensseite gewesen 2009, wenn es wurde eine Reihe pa berichtet 734.590 Millionen. ||| Es hat die niedrigste Einkommensseite 2009 gegeben, als es eine Zahl pa 734.590 Millionen gemeldet wurde.
+48681: 0.328 Ersatzteile für Ersatzteile. – Wie man Geld auf Online-Casinos machen ||| Ersatzteile für Ersatzteile. – Wie man Geld auf Online-Casinos machen
+10107: 0.737 Australien Mittwoch Lottozahlen - 16 Dezember 2015 - Lotterien ||| Australien Mittwoch Lottozahlen - 16 Dezember 2015 - Lotterien
+52443: 0.614 Das Pentagon ist hinter dem geheimen psychologischen Experiment in Facebook – Actualidadrt1 ||| Das Pentagon steckt hinter dem geheimen psychologischen Experiment in Facebook – Actualidadrt1
+57691: 0.006 Die Gewinne werden mit dem Gesamteinsatz multipliziert. ||| Die Preise werden mit der Gesamtwette multipliziert.
+63912: 0.046 Passen Sie den Zuschneiderahmen an, indem Sie den Rahmen berühren und halten. ||| Um den Kornrahmen anzupassen, berühren und halten Sie die Kante des Kornrahmens.
+57768: 0.470 Die Professorinnen und Professoren setzen alle Medien (Bild, Ton, Schrift, Grafiken) zur Wissensvermittlung ein. ||| Die Professoren verwenden alle Arten von Medien (Bild, Ton, Schreiben, Grafik) für die Vermittlung von Wissen.
+63859: 0.270 Müde, aber glücklich, wenn du den refresh “göttlich” Den Abend verbrachten wir Duschen am Ufer des Genfer Sees. ||| Müde, aber glücklich, wenn Sie die Erfrischung der Divine.Wir verbrachten die Abendduschen am Ufer des Genfer Sees.
+50546: 0.146 Vielen Dank für Ihre Anmeldung pa! Sehen Sie Ihren Posteingang auf exklusiven Coupon Angebote, Verkaufsprognosen und Updates zu neuen Produkten. ||| Vielen Dank für die Anmeldung pa! Sehen Sie Ihren Posteingang für exklusive Coupon-Angebote, Umsatzprognosen und Updates über neue Produkte.
