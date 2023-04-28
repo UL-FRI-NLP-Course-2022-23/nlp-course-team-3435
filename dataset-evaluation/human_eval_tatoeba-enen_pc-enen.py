@@ -7,13 +7,13 @@ uname = "noname"
 if len(sys.argv) == 2:
     uname = sys.argv[1]
 
-N_TATOEBA = 2
+N_TATOEBA = 20
 
 tatoeba_enen = datasets.load_dataset("Helsinki-NLP/tatoeba_mt", language_pair="eng-eng", split='test')
 sample_ids = random.sample(range(tatoeba_enen.num_rows), N_TATOEBA)
 tatoeba_enen_samples = tatoeba_enen.select(sample_ids)
 
-N_PC = 2
+N_PC = 20
 
 pc_enen = datasets.load_dataset("yawnick/para_crawl_enen", split='train')
 sample_ids = random.sample(range(pc_enen.num_rows), N_PC)
