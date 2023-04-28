@@ -29,4 +29,4 @@ We evaluate the quality of our datasets via human evaluation of a dataset sample
 
 | Language | Our dataset | Tatoeba |
 | --- | --- | --- |
-| en-en | XXX | XXX |
+| en-en | 0.256 | 0.307 |
