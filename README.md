@@ -8,26 +8,25 @@ Team members:
 Group public acronym/name: `TEAM 3435`
  > This value will be used for publishing marks/scores. It will be known only to you and not you colleagues.
 
- # Data
+# Objective
 
- The repository doesn't collect any new dataset. Instead, we have decided to laverage the already existing ones.
+Being an international Teamit makes sense for us use this situation to delve into multilingual language models. It is known that in other cross-lingual tasks multilingual models can outperform monolingual ones. Given that paraphrasing is not by default a cross-lingual task, but is closely related to translation, we aim to find out a multilingually trained model performs in this task against a monolingual model as a baseline.
 
- ## PPDB
+# Data
 
- The paraphrase.org dataset (**PPDB**) dataset can be downloaded  [here](http://paraphrase.org/#/download). 
+The repository doesn't collect any new dataset. Instead, we have decided to leverage the already existing ones.
+We use the [ParaCrawl](https://opus.nlpl.eu/ParaCrawl.php) dataset which consists of lots of sentences in different languages. We use maching translation models from [huggingface](https://huggingface.co/) to create paraphrase data from this translation dataset. While other multilingual parallel datasets include sentence pairs within a language (i.e. paraphrases), they include only few if any of these paraphrase sentence pairs in medium resource languages like Slovene. With our approach we create similarly sized paraphrase datasets for different languages including medium resource languages by leveraging translation data, which is more widely available than paraphrase data.
 
- Utilities for working with the dataset are implemented in [datautils](https://github.com/UL-FRI-NLP-Course-2022-23/nlp-course-team-3435/blob/master/src/datautils.py).
+Our generated data can be accessed on huggingface:
+- [ParaCrawl-enen](https://huggingface.co/datasets/yawnick/para_crawl_enen)
+- [ParaCrawl-dede](https://huggingface.co/datasets/yawnick/para_crawl_dede)
+- ParaCrawl-slsl
+- ParaCrawl-cscs
 
-Example of using the data parser: 
+### Dataset Evaluation
 
-```
-import datautils
+We evaluate the quality of our datasets via human evaluation of a dataset sample and in direct comparison to other popular paraphrase datasets. We evaluate semantic similarity and lexical divergence and calculate a score base on their combination.
 
-PATH = "<YOUR_LOCAL_PATH>"
-
-with open(PATH, "r") as file_ppdb:
-    for data in datautils.parse_data_ppdb(file_ppdb):
-        # work with the data here
-        pass
-
-```
+| Language | Our dataset | Tatoeba |
+| --- | --- | --- |
+| en-en | XXX | XXX |
