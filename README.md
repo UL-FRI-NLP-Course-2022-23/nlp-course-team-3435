@@ -10,7 +10,7 @@ Group public acronym/name: `TEAM 3435`
 
 # Objective
 
-Being an international Teamit makes sense for us use this situation to delve into multilingual language models. It is known that in other cross-lingual tasks multilingual models can outperform monolingual ones. Given that paraphrasing is not by default a cross-lingual task, but is closely related to translation, we aim to find out a multilingually trained model performs in this task against a monolingual model as a baseline.
+Being an international team, it makes sense for us use this situation to delve into multilingual language models. It is known that in other cross-lingual tasks multilingual models can outperform monolingual ones. Given that paraphrasing is not by default a cross-lingual task, but is closely related to translation, we aim to find out, whether a multilingually trained model performs in this task against a monolingual model as a baseline.
 
 # How to run our code
 
@@ -40,7 +40,7 @@ We evaluate the quality of our monolingual datasets via human evaluation of a da
 | en-en | 0.256 | 0.307 |
 | de-de | 0.291 | 0.588 |
 | sl-sl | 0.271 | 0.015 |
-| cs-cs | **TODO** | **TODO** |
+| cs-cs | 0.189 | 0.210 |
 
 # Models
 
