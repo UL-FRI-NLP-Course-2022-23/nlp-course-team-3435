@@ -32,7 +32,7 @@ We evaluate the quality of our monolingual datasets via human evaluation of a da
 | Language | Our dataset | Tatoeba |
 | --- | --- | --- |
 | en-en | 0.256 | 0.307 |
-| de-de | **TODO** | **TODO** |
+| de-de | 0.291 | 0.588 |
 | sl-sl | 0.271 | 0.015 |
 | cs-cs | **TODO** | **TODO** |
 
