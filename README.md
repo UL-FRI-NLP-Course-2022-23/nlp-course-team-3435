@@ -1,4 +1,4 @@
-# Natural language processing course 2022/23: `Paraphrasing sentences`
+# Natural language processing course 2022/23: `Multillingual paraphrasing of sentences`
 
 Team members:
  * `Jannik Weiß`, `70088643`, `jw30016@student.uni-lj.si`
@@ -11,6 +11,12 @@ Group public acronym/name: `TEAM 3435`
 # Objective
 
 Being an international Teamit makes sense for us use this situation to delve into multilingual language models. It is known that in other cross-lingual tasks multilingual models can outperform monolingual ones. Given that paraphrasing is not by default a cross-lingual task, but is closely related to translation, we aim to find out a multilingually trained model performs in this task against a monolingual model as a baseline.
+
+# How to run our code
+
+First, please read the below sections to understand what we did. 
+The folder `dataset-evaluation` contains the human evaluation framework and scripts for running the human evaluation as command line dialogues. In the paper we only include results from the scripts of the form `human_eval_tatoeba-xxxx_pc-xxxx.py`. These can be run with your name as a command line argument.
+The folder `notebooks` contains all the notebooks used for dataset creation, training and evaluation. These can be run in a google standard colab environment with a GPU runtime.
 
 # Data
 
